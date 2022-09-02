@@ -1,0 +1,69 @@
+html::-webkit-scrollbar{
+    width: 0px;
+    border-radius: 1rem;
+}
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: radial-gradient(114.68% 261.07% at 4.06% 2.27%, #398CCB 0%, #8358D2 19.98%, #5E72CE 34.52%, #8954D3 47.74%, #5876CE 63.64%, #7165D0 84.11%, #D340F7 100%) !important; 
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/*------------------------------------------
+#sidebar styling
+--------------------------------------------*/
+.nav-bg{
+   
+    backdrop-filter: blur(10px) !important;
+    box-shadow:none !important;
+}
+.nav-brand{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.brand-img{
+    margin-right: 0.6rem;
+}
+#brand-name{
+    color:  #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    backdrop-filter: blur(10px) !important;
+    color: #afaeae;
+    width: 80%;
+    margin: 0.3rem 5% 0.3rem 10%;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.navbar-nav .nav-item .active{
+    background: rgba(255, 255, 255, 0.4);
+    color: #040925;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.icon-box{
+    width: 2.3rem;
+    height: 2.3rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1rem;
+    margin-right: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    color:black;
+}
+.nav-title{
+    color: #040925;
+    margin-left: 1rem;
+}
