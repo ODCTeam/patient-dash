@@ -17,11 +17,11 @@ export class UserProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (localStorage.getItem("username") == null) {
-      this.router.navigateByUrl("/User/forbidden");
-    }
-    this.username = localStorage.getItem('username');
-    this.email = this.username+"@gmail.com";
+    // if (localStorage.getItem("username") == null) {
+    //   this.router.navigateByUrl("/User/forbidden");
+    // }
+    // this.username = localStorage.getItem('username');
+    // this.email = this.username+"@gmail.com";
     
   }
 

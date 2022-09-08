@@ -19,14 +19,14 @@ export class TablesComponent implements OnInit {
       this.router.navigateByUrl("/User/forbidden");
     }
     */
-    if (localStorage.getItem("username") == null) {
-      this.router.navigateByUrl("/User/forbidden");
-    }
-    this.contractService.AllTransactions().subscribe((res:any)=>{
-      this.Transactions = res;
-      this.Transactions = this.Transactions.filter(Transaction => Transaction);
-      console.log(this.Transactions);
-    });
+    // if (localStorage.getItem("username") == null) {
+    //   this.router.navigateByUrl("/User/forbidden");
+    // }
+    // this.contractService.AllTransactions().subscribe((res:any)=>{
+    //   this.Transactions = res;
+    //   this.Transactions = this.Transactions.filter(Transaction => Transaction);
+    //   console.log(this.Transactions);
+    // });
 
     
 

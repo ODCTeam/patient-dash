@@ -26,9 +26,9 @@ export class DashboardComponent implements OnInit {
   constructor(private router:Router){}
   ngOnInit() {
 
-    if (localStorage.getItem("Role") != "0") {
-      this.router.navigateByUrl("/User/forbidden");
-    }
+    // if (localStorage.getItem("Role") != "0") {
+    //   this.router.navigateByUrl("/User/forbidden");
+    // }
 
     this.datasets = [
       [0, 20, 10, 30, 15, 40, 20, 60, 60],
