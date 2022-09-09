@@ -1,4 +1,4 @@
-import { ContractServiceService } from './../../services/contract-service.service';
+import { ContractServiceService } from '../../services/contract-service.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
@@ -8,11 +8,11 @@ import { transaction } from 'src/app/model/transaction';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-immobiliers-for-sale',
-  templateUrl: './immobiliers-for-sale.component.html',
-  styleUrls: ['./immobiliers-for-sale.component.scss']
+  selector: 'app-PatientSchedule',
+  templateUrl: './PatientSchedule.component.html',
+  styleUrls: ['./PatientSchedule.component.scss']
 })
-export class ImmobiliersForSaleComponent implements OnInit {
+export class PatientScheduleComponent implements OnInit {
 
 
   public Immobiliers: any[];

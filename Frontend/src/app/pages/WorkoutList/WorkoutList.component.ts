@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-user-profile',
-  templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.scss']
+  selector: 'app-WorkoutList',
+  templateUrl: './WorkoutList.component.html',
+  styleUrls: ['./WorkoutList.component.scss']
 })
-export class UserProfileComponent implements OnInit {
+export class WorkoutListComponent implements OnInit {
 
   username; firstname; lastname; email;
   

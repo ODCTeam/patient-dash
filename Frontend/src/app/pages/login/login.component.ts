@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
 
           if (roleName == "USER") {
             console.log("A USER has logged in called " + res.body["username"])
-            this.router.navigateByUrl("/User/ImmobiliersForSale");
+            this.router.navigateByUrl("/User/PatientSchedule");
           } else {
             console.log("A ADMIN has logged in called " + res.body["username"])
             this.router.navigateByUrl("/Admin/dashboard");

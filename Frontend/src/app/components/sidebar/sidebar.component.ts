@@ -8,12 +8,19 @@ declare interface RouteInfo {
   icon: string;
   class: string;
 }
-export const ROUTES: RouteInfo[] = [
-  { path: 'ImmobiliersForSale', title: 'Schedule', icon: 'ni-building text-primary', class: '' },
-  { path: 'profile', title: 'Workouts List', icon: 'ni-single-02 text-yellow', class: '' },
-  { path: 'tables', title: 'Chat App', icon: 'ni-bullet-list-67 text-red', class: '' },
-  { path: '/Auth/login', title: 'Virtual Reality', icon: 'ni-key-25 text-info', class: '' },
-  { path: '/Auth/register', title: 'RTL', icon: 'ni-circle-08 text-pink', class: '' },
+export const PatientROUTES: RouteInfo[] = [
+  { path: '', title: 'Schedule', icon: 'ni-building text-primary', class: '' },
+  { path: 'WorkoutList', title: 'Workouts List', icon: 'ni-single-02 text-yellow', class: '' },
+  { path: 'ChatApp', title: 'Chat App', icon: 'ni-bullet-list-67 text-red', class: '' },
+  { path: '/Auth/login', title: 'login', icon: 'ni-key-25 text-info', class: '' },
+  { path: '/Auth/register', title: 'register', icon: 'ni-circle-08 text-pink', class: '' },
+  { path: 'forbidden', title: 'forbidden', icon: 'ni-circle-08 text-pink', class: '' }
+];
+export const DoctorROUTES: RouteInfo[] = [
+  { path: 'PatientList', title: 'Patient List', icon: 'ni-building text-primary', class: '' },
+  { path: 'DeviceList', title: 'Device List', icon: 'ni-single-02 text-yellow', class: '' },
+  { path: 'ChatApp', title: 'Chat App', icon: 'ni-bullet-list-67 text-red', class: '' },
+  { path: 'WorkoutsList', title: 'WorkoutsList', icon: 'ni-bullet-list-67 text-red', class: '' },
   { path: 'forbidden', title: 'forbidden', icon: 'ni-circle-08 text-pink', class: '' }
 ];
 export const AdminROUTES: RouteInfo[] = [
@@ -21,9 +28,9 @@ export const AdminROUTES: RouteInfo[] = [
   { path: '/Admin/Immobiliers', title: 'Immobiliers', icon: 'ni-bullet-list-67 text-red', class: '' }
 ];
 export const UserROUTES: RouteInfo[] = [
-  { path: 'user-profile', title: 'My profile', icon: 'ni-single-02 text-yellow', class: '' },
+  { path: 'WorkoutList', title: 'My profile', icon: 'ni-single-02 text-yellow', class: '' },
   { path: '/User/MyImmobiliers', title: 'My Immobiliers', icon: 'ni-house text-yellow', class: '' },
-  { path: '/User/ImmobiliersForSale', title: 'Immobiliers for sale', icon: 'ni-shop text-red', class: '' },
+  { path: '/User/PatientSchedule', title: 'Immobiliers for sale', icon: 'ni-shop text-red', class: '' },
   { path: '/User/AddImmobilier', title: 'Add Immobilier', icon: 'ni-add text-yellow', class: '' },
   { path: '/User/ModifyImmobilier', title: 'Modify Immobilier', icon: 'ni-add text-yellow', class: '' },
 ];
@@ -37,7 +44,7 @@ export class SidebarComponent implements OnInit {
 
   public menuItems: any[];
   public isCollapsed = true;
-
+  public customRouter: any;
   constructor(private authService: AuthServiceService, private router: Router) { }
 
   Logout() {
@@ -45,7 +52,21 @@ export class SidebarComponent implements OnInit {
     this.router.navigateByUrl("/Auth/login");
   }
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+    if (localStorage.getItem("Role") != "Doctor") {
+      this.customRouter = PatientROUTES;
+    }
+    else if (localStorage.getItem("Role") != "Patient") {
+      this.customRouter = DoctorROUTES;
+    }
+    else if (localStorage.getItem("Role") != "0") {
+      this.router.navigateByUrl("/User/forbidden");
+    }
+
+    if (localStorage.getItem("username") == null) {
+      this.router.navigateByUrl("/User/forbidden");
+    }
+
+    this.menuItems = this.customRouter.filter(menuItem => menuItem);
     this.router.events.subscribe((event) => {
       this.isCollapsed = true;
     });

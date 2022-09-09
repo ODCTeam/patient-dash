@@ -10,8 +10,8 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
 import { IconsComponent } from '../../pages/icons/icons.component';
 import { MapsComponent } from '../../pages/maps/maps.component';
-import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
-import { TablesComponent } from '../../pages/tables/tables.component';
+import { WorkoutListComponent } from '../../pages/WorkoutList/WorkoutList.component';
+import { ChatAppComponent } from '../../pages/ChatApp/ChatApp.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -26,7 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   declarations: [
     DashboardComponent,
-    TablesComponent,
+    ChatAppComponent,
     ImmobilierDetailsComponent,
     IconsComponent,
     MapsComponent

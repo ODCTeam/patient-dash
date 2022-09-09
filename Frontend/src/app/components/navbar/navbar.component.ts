@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { ROUTES } from '../sidebar/sidebar.component';
+import { DoctorROUTES } from '../sidebar/sidebar.component';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { Router } from '@angular/router';
@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listTitles = ROUTES.filter(listTitle => listTitle);
+    this.listTitles = DoctorROUTES.filter(listTitle => listTitle);
   }
   Logout() {
     this.authService.logout()
