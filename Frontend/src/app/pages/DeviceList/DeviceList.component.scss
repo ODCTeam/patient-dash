@@ -5,11 +5,152 @@
     justify-content: flex-start;
     align-items: center;
 }
-.chat-app{
-    background:rgba($color: #fff, $alpha: 0.1);
-    backdrop-filter: blur(10px);
+.x-container{
     border-radius: 1rem;
     margin-top: 4rem;
     margin-left: 1.5rem;
     height: 80vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ourproduct{
+    width: 100%;
+    height: 25%;
+    background: rgba($color: #fff, $alpha: 0.4);
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.ourproduct h1{
+    padding: 0.5rem 1rem 0rem 1rem;
+    font-size: 1.3rem;
+}
+.product-list{
+    padding-inline:1rem;
+    display: flex;
+}
+.product-list .item{
+    width: 12rem;
+    height: 8rem;
+    border-radius: 1rem 0rem 1rem 0rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 11.3115px 40px 0px;
+    margin-right: 1.5rem;
+}
+.prod-img{
+    height: 100%;
+    width: 100%;
+    transform: scale(1.4);
+}
+.devicelist{
+    width: 100%;
+    height: 73%;
+    background: rgba($color: #fff, $alpha: 0.3);
+    border-radius: 0rem 0rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list{
+    height: 100%;
+    background:rgba($color: #fff, $alpha: 0.5);
+    border-radius: 0rem 0rem 0rem 1rem;
+}
+.deviceinfo{
+    border: 1px solid blue;
+    height: 100%;
+}
+
+/*------------------------------
+#devicelist
+-------------------------------*/
+.header{
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-inline: 0.5rem 1.5rem;
+    color: #344767;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+.header > div{
+    margin-right: 10rem;
+}
+.patient-box{
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    margin-block: 0.5rem;
+    background-color: #fff;
+    border-radius: 10px 0rem  10px 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+}
+.list > .active , .patient-box:hover{
+    background-color: #BBDCE3;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 10px -20px;
+    transition: all 0.25s ease;
+}
+.profile-img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px 0rem  10px 0rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 11.3115px 40px 0px;
+    margin-right: 1rem;
+}
+.maininfo{
+    display: flex;
+    align-items: center;
+}
+.nameemail{
+    margin-inline-start: 0.5rem;
+}
+.name{
+    color: #344767;
+    font-size: 1rem;
+}
+.email{
+    color:#8392AB ;
+    font-size: 0.7rem;
+}
+.item{
+    color: #344767;
+    font-size: 0.8rem;
+}
+
+
+/*------------------------------
+#deviceinfo    
+-------------------------------*/
+.deviceinfo{
+    padding-top: 5rem;
+    padding-left: 3rem;
+}
+.deviceinfo h2{
+    margin-bottom: 2rem;
+}
+.info-box{
+    display: block;
+}
+.info-box div{
+    width: 90%;
+    color: #2F2B2B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.info-box div span{
+    color:#dddddd;
+    font-size: 0.8rem;
 }

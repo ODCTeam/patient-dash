@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Estate chain';
   constructor( private router: Router) { 
-    this.router.navigate(['/'+localStorage.getItem("Role")]
+    this.router.navigate(['/'+localStorage.getItem("Role")])
   }
-
 }
