@@ -8,22 +8,24 @@
 .patientlist{
     background:rgba($color: #fff, $alpha: 0.3);
     backdrop-filter: blur(10px);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     position: relative;
     top: 2rem;
     left: 2rem;
     height: 80vh;
     margin: 0;
     padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 11.3115px 40px 0px;
 }
 .list{
     height: 100%;
     background:rgba($color: #fff, $alpha: 0.5);
-    border-radius: 1rem 0rem 0rem 1rem;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    box-shadow: rgb(44, 62, 80) 15px 0px 15px -15px;
 }
 .patientinfo{
     height: 100%;
-    border-radius: 0rem 1rem 1rem 0rem;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
 }
 
 /*------------------------------
@@ -60,6 +62,10 @@
 .list > .active , .patient-box:hover{
     background-color: #BBDCE3;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 10px -20px;
+    transition: all 0.25s ease;
+}
+.patient-box:hover{
+    margin-left: 0.5rem;
     transition: all 0.25s ease;
 }
 .profile-img{

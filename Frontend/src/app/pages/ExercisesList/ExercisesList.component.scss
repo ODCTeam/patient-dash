@@ -5,11 +5,139 @@
     justify-content: flex-start;
     align-items: center;
 }
-.chat-app{
-    background:rgba($color: #fff, $alpha: 0.1);
+.x-container{   
     backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    margin-top: 4rem;
-    margin-left: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
     height: 80vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+aside{
+    background: rgba($color: #fff, $alpha: 0.6);
+    padding: 0;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem 0rem 0rem .5rem;
+}
+aside h2{
+    padding: 1rem 1rem 0rem 1rem;
+    margin-bottom: 0.5rem;
+}
+aside .categories{
+    width: 100%;
+    padding: 0.5rem 0rem 1rem 1rem; 
+}
+.cat{
+    width: 95%;
+    border-radius: 0.9rem 0rem 0.9rem 0rem;
+    padding: 0.8rem 0rem 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+    font-size: 0.9rem;
+    color:#344767;
+    transition: all 0.25s ease;
+}
+.categories .active{
+    background-color:#BBDCE3 ;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 10px -20px;
+    font-weight: 600;
+}
+.cat:hover{
+    margin-left: 0.5rem;
+    background-color: #BBDCE3;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 10px -20px;
+    transition: all 0.25s ease;
+}
+main{
+    height: 100%;
+    background: rgba($color: #fff, $alpha: 0.2);
+    margin: 0;
+    padding: 0;
+    padding: 2rem 2rem;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+.exerciselist{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(auto-fill, 160px) /  repeat(auto-fill, 189px) ;
+    grid-auto-rows: 160px;
+    gap: 0.7rem;
+    align-content: start;
+    justify-content: center;
+}
+.item{
+    background: #333;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+.item .workout-image{
+    width: 100%;
+    height: 100%;
+}
+.item .hover-bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 1rem;
+    top: -100%;
+    left: 0;
+    background-color:rgba($color: #000000, $alpha: 0.5);
+    transform: scale(0);
+    padding: 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.item:hover .hover-bg{
+    transform: scale(1);
+    transition: all 0.4s ease;
+}
+.hover-bg .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.hover-bg .content h3{
+    color: #ffff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.hover-bg .content .desc{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hover-bg .content .desc span{
+    color: #ccc;
+    font-size: .8rem;
+}
+.add-btn{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 10px -20px;
+    position: relative;
+    top: -196%;
+    left: 158px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+.add-btn:hover{
+    background-color: rgba($color: #fff, $alpha: .3);
+    transition: all 0.25s ease;
+}
+.add-btn:hover .fa-plus{
+    color: #fff;
 }

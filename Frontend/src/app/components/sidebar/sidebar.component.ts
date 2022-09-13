@@ -20,7 +20,7 @@ export const DoctorROUTES: RouteInfo[] = [
   { path: 'PatientList', title: 'Patient List', icon: 'ni-building text-primary', class: '' },
   { path: 'DeviceList', title: 'Device List', icon: 'ni-single-02 text-yellow', class: '' },
   { path: 'ChatApp', title: 'Chat App', icon: 'ni-bullet-list-67 text-red', class: '' },
-  { path: 'WorkoutsList', title: 'WorkoutsList', icon: 'ni-bullet-list-67 text-red', class: '' },
+  { path: 'ExercisesList', title: 'Exercises List',  icon: 'ni-bullet-list-67 text-red', class: '' },
   { path: 'forbidden', title: 'forbidden', icon: 'ni-circle-08 text-pink', class: '' }
 ];
 export const AdminROUTES: RouteInfo[] = [
