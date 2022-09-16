@@ -130,3 +130,184 @@
     font-size: 0.9rem;
     margin-top: 0.3rem;
 }
+.stat{
+    padding: 0%;
+    margin: 1rem;
+}
+.card{
+    height: 7.5rem;
+}
+.info-title{
+    color:#344767 ;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0rem 2rem;
+}
+.info-box{
+    display: block;
+    padding: 1rem 2rem;
+}
+.info-box div{
+    width: 90%;
+    color: #2F2B2B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.info-box div span{
+    color:#dddddd;
+    font-size: 0.8rem;
+}
+/*-----------------------------------------
+#Mini circular Progress Bar
+-------------------------------------------*/
+.miniprogress{
+    background: none;
+    box-shadow: none;
+    width: 4rem;
+    height: 4rem;
+    line-height: 150px;
+    position: relative;
+    left: 1.5rem;
+    background:  rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.miniprogressmini:after{
+    content: "";
+    border-radius: 50%;
+    border: 15px solid rgba( 255,255,255,0.3 );
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2 ),
+             inset -4px -4px 6px -1px rgba( 255,255,255,0.7 ) ,
+             -0.5px -0.5px 0px rgba( 255,255,255,1 ) ,
+             0.5px 0.5px 0px rgba( 0,0,0,0.15 ) ,
+             0px 12px 10px 10px rgba( 0,0,0,0.05 ) ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.miniprogress > span{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.miniprogress .miniprogress-left{
+    left: 0;
+}
+.miniprogress .miniprogress-bar{
+    border-width: 4px;
+    border-style: solid;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    top: 0;
+}
+.miniprogress .miniprogress-left .miniprogress-bar{
+    left: 100%;
+    border-top-right-radius: 160px;
+    border-bottom-right-radius: 160px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.miniprogress .miniprogress-right{
+    right: 0;
+}
+.miniprogress .miniprogress-right .miniprogress-bar{
+    left: -100%;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    border-top-left-radius: 160px;
+    border-bottom-left-radius: 160px;
+    border-right: 0;
+    animation: loading-1 1.8s ease forwards;
+}
+.miniprogress .miniprogress-value{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    inset: -65% 2%;
+}
+
+
+.miniprogress.blue .miniprogress-bar{
+    border-color: #7165D0 ;
+}
+.miniprogress.blue .miniprogress-left .miniprogress-bar{
+    animation: loading-2 1.5s linear forwards 1.8s;
+}
+.miniprogress.yellow .miniprogress-bar{
+    border-color: #fdc426;
+}
+.miniprogress.yellow .miniprogress-left .pminirogress-bar{
+    animation: loading-3 1s linear forwards 1.8s;
+}
+.miniprogress.pink .miniprogress-bar{
+    border-color: #f83754;
+}
+.miniprogress.pink .miniprogress-left .miniprogress-bar{
+    animation: loading-4 0.4s linear forwards 1.8s;
+}
+//   progress bar animations
+@keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+@keyframes loading-3{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+@keyframes loading-4{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+}
+@keyframes loading-5{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(126deg);
+        transform: rotate(126deg);
+    }
+}
