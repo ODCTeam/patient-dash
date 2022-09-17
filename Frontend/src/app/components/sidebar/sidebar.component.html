@@ -7,7 +7,7 @@
     </button>
     <!-- Brand -->
     <a class="nav-brand pt-20" routerLinkActive="active" [routerLink]="['/']">
-      <img src="../../../assets/img/brand/logoPhyarW.svg" width="25%" class="brand-img" alt="..."   > <span id="brand-name">PhyAR</span> 
+      <img src="../../../assets/img/brand/logoPhyarW.svg" width="25%" class="brand-img" alt="..."   > <span id="brand-name">PhyAR</span>
     </a>
     <!-- User -->
     <ul class="nav align-items-center d-md-none">
@@ -92,7 +92,7 @@
       <ul class="navbar-nav">
         <li *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item ">
           <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link">
-            <div class="icon-box"><i class="fa-solid {{menuItem.icon}}"></i></div> 
+            <div class="icon-box"><i class="fa-solid {{menuItem.icon}}"></i></div>
             {{menuItem.title}}
           </a>
         </li>
@@ -111,11 +111,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/User/ModifyImmobilier">
             <i class="ni ni-ui-04 icon-box"></i> Log Out
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/User/ChatApp">
-            <i class="ni ni-money-coins  icon-box"></i> View Transactions
           </a>
         </li>
       </ul>

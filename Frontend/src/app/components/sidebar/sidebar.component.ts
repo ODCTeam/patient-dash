@@ -12,16 +12,16 @@ export const PatientROUTES: RouteInfo[] = [
   { path: '', title: 'Schedule', icon: 'fa-calendar text-primary', class: '' },
   { path: 'WorkoutList', title: 'Workouts List', icon: 'fa-dumbbell text-primary', class: '' },
   { path: 'ChatApp', title: 'Chat App', icon: 'fa-comment-medical text-primary', class: '' },
-  { path: '/Auth/login', title: 'login', icon: 'ni-key-25 text-primary', class: '' },
-  { path: '/Auth/register', title: 'register', icon: 'ni-circle-08 text-primary', class: '' },
-  { path: 'forbidden', title: 'forbidden', icon: 'ni-circle-08 text-primary', class: '' }
+  //{ path: '/Auth/login', title: 'login', icon: 'ni-key-25 text-primary', class: '' },
+  //{ path: '/Auth/register', title: 'register', icon: 'ni-circle-08 text-primary', class: '' },
+  //{ path: 'forbidden', title: 'forbidden', icon: 'ni-circle-08 text-primary', class: '' }
 ];
 export const DoctorROUTES: RouteInfo[] = [
   { path: 'PatientList', title: 'Patient List', icon: 'fa-solid fa-people-group text-primary', class: '' },
   { path: 'DeviceList', title: 'Device List', icon: 'fa-vr-cardboard text-primary', class: '' },
   { path: 'ChatApp', title: 'Chat App', icon: ' fa-comment-medical text-primary', class: '' },
   { path: 'ExercisesList', title: 'Exercises List',  icon: 'fa-dumbbell text-primary', class: '' },
-  { path: 'forbidden', title: 'forbidden', icon: 'ni-circle-08 text-primary',  class: '' }
+  //{ path: 'forbidden', title: 'forbidden', icon: 'ni-circle-08 text-primary',  class: '' }
 ];
 export const AdminROUTES: RouteInfo[] = [
   { path: '/Admin/dashboard', title: 'Dashboard', icon: 'ni-tv-2 text-primary', class: '' },
